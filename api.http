@@ -1,0 +1,28 @@
+@baseUrl = http://localhost:5000
+
+### Create user
+POST {{baseUrl}}/users/create
+Content-Type: application/json
+
+{
+  "name": "anuj",
+  "email": "anujchy26@example.com",
+  "password": "password13"
+}
+### register user
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "name": "anuj ",
+  "email": "anu@example.com",
+  "password": "password123"
+}
+### login user
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "anuj@example.com",
+  "password": "password123"
+}
