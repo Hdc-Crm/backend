@@ -27,7 +27,7 @@ const login = asyncHandler(async (req, res) => {
     throw new Error("Incorrect password");
   }
   const token = await generateToken(user._id);
-  res.status(200).json({ user, token });
+  res.status(200).json({ token });
 });
 
 export { generateToken, register, login };

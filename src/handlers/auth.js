@@ -1,9 +1,9 @@
 /** @format */
 
 import { Router } from "express";
-import { register, login } from "../services/auth.js";
 import { useValidator } from "../middlewares/useValidator.js";
 import { createUserValidator, loginUserValidator } from "../validators/user.js";
+import { register, login } from "../services/auth.js";
 
 const router = Router();
 
