@@ -3,10 +3,11 @@
 import asyncHandler from "express-async-handler";
 import jwt from "jsonwebtoken";
 
-const publicPaths = ["/auth/register", "/auth/login", "/users"];
+const publicPaths = ["/auth/register", "/auth/login", "/users", "/users/create"];
 
 export const authMiddleware = asyncHandler(async (req, res, next) => {
-  if (publicPaths.includes(req.path)) {
+  // allow all auth routes and explicit public user routes
+  if (req.path.startsWith("/auth") || publicPaths.includes(req.path)) {
     return next();
   }
 

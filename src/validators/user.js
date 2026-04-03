@@ -17,6 +17,7 @@ export const loginUserValidator = [
   body("password")
     .trim()
     .notEmpty()
+    .withMessage("Password is required")
     .isLength({ min: 8 })
-    .withMessage("Password is required"),
+    .withMessage("Password must be at least 6 characters long")
 ];

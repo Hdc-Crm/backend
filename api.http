@@ -1,5 +1,5 @@
 @baseUrl = http://localhost:5000
-
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWNlNTJmM2VhNTg2MTg1YjJkMmM4NTIiLCJpYXQiOjE3NzUxODY2NjMsImV4cCI6MTc3NjQ4MjY2M30.FKTtcWUcOD02jxP8c3XEP9Wdg0QI_1qn5UbBQbcoEBU
 ### Create user
 POST {{baseUrl}}/users/create
 Content-Type: application/json
@@ -15,14 +15,14 @@ Content-Type: application/json
 
 {
   "name": "anuj ",
-  "email": "anu@example.com",
-  "password": "password123"
+  "email": "anuj1@example.com",
+  "password": "12345678"
 }
 ### login user
 POST {{baseUrl}}/auth/login
 Content-Type: application/json
 
 {
-  "email": "anuj@example.com",
-  "password": "password123"
+  "email": "anuj1@example.com",
+  "password": "123456787"
 }
