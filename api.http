@@ -26,3 +26,63 @@ Content-Type: application/json
   "email": "anuj1@example.com",
   "password": "123456787"
 }
+
+### create lead
+POST {{baseUrl}}/leads
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "anuj",
+  "email": "anuj1@example.com",
+  "phone": "12345678",
+  "company": "google",
+  "status": "new",
+  "source": "website",
+  "assignedTo": "69d10ad36021779edd8c00d7",
+  "notes": "notes"
+}
+### create deal
+POST {{baseUrl}}/deals
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "title": "deal",
+  "lead": "69d10ad36021779edd8c00d7",
+  "value": 1000,
+  "stage": "negotiation",
+  "probability": 50,
+  "expectedCloseDate": "2022-01-01",
+  "assignedTo": "69d10ad36021779edd8c00d7",
+  "notes": "notes"
+}
+
+### create task
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "title": "task",
+  "description": "description",
+  "dueDate": "2022-01-01",
+  "priority": "low",
+  "status": "pending",
+  "assignedTo": "69d10ad36021779edd8c00d7",
+  "lead": "69d10ad36021779edd8c00d7",
+  "deal": "69d10ad36021779edd8c00d7"
+}
+### create activity
+POST {{baseUrl}}/activities
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "action": "lead_created",
+  "user": "69d10ad36021779edd8c00d7",
+  "lead": "69d10ad36021779edd8c00d7",
+  "deal": "69d10ad36021779edd8c00d7",
+  "task": "69d10ad36021779edd8c00d7",
+  "metadata": {}
+}
